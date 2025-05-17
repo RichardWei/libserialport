@@ -22,10 +22,10 @@
 AC_PREREQ([2.63])
 
 # libserialport package version number (NOT the same as shared lib version!).
-m4_define([sp_package_version_major], [0])
-m4_define([sp_package_version_minor], [1])
-m4_define([sp_package_version_micro], [2])
-m4_define([sp_package_version], [sp_package_version_major.sp_package_version_minor.sp_package_version_micro])
+# m4_define([sp_package_version_major], [0])
+# m4_define([sp_package_version_minor], [1])
+# m4_define([sp_package_version_micro], [2])
+# m4_define([sp_package_version], [sp_package_version_major.sp_package_version_minor.sp_package_version_micro])
 
 AC_INIT([libserialport], [sp_package_version], [martin-libserialport@earth.li],
 	[libserialport], [http://sigrok.org/wiki/Libserialport])
@@ -66,11 +66,11 @@ SP_PROG_VERSION([$CC], [sp_cc_version])
 # Initialize libtool.
 LT_INIT
 
-AC_DEFINE([SP_PACKAGE_VERSION_MAJOR], [sp_package_version_major], [.])
-AC_DEFINE([SP_PACKAGE_VERSION_MINOR], [sp_package_version_minor], [.])
-AC_DEFINE([SP_PACKAGE_VERSION_MICRO], [sp_package_version_micro], [.])
-AC_DEFINE([SP_PACKAGE_VERSION_STRING], ["sp_package_version"], [.])
-AC_SUBST([SP_PACKAGE_VERSION], [sp_package_version])
+# AC_DEFINE([SP_PACKAGE_VERSION_MAJOR], [sp_package_version_major], [.])
+# AC_DEFINE([SP_PACKAGE_VERSION_MINOR], [sp_package_version_minor], [.])
+# AC_DEFINE([SP_PACKAGE_VERSION_MICRO], [sp_package_version_micro], [.])
+# AC_DEFINE([SP_PACKAGE_VERSION_STRING], ["sp_package_version"], [.])
+# AC_SUBST([SP_PACKAGE_VERSION], [sp_package_version])
 
 # Library version for libserialport (NOT the same as the package version).
 # Carefully read the libtool docs before updating these numbers!
@@ -82,10 +82,10 @@ SP_LIB_VERSION_AGE=1
 AC_SUBST([SP_LIB_VERSION],
 	["$SP_LIB_VERSION_CURRENT:$SP_LIB_VERSION_REVISION:$SP_LIB_VERSION_AGE"])
 
-AC_DEFINE_UNQUOTED([SP_LIB_VERSION_CURRENT], [$SP_LIB_VERSION_CURRENT], [.])
-AC_DEFINE_UNQUOTED([SP_LIB_VERSION_REVISION], [$SP_LIB_VERSION_REVISION], [.])
-AC_DEFINE_UNQUOTED([SP_LIB_VERSION_AGE], [$SP_LIB_VERSION_AGE], [.])
-AC_DEFINE_UNQUOTED([SP_LIB_VERSION_STRING], ["$SP_LIB_VERSION"], [.])
+# AC_DEFINE_UNQUOTED([SP_LIB_VERSION_CURRENT], [$SP_LIB_VERSION_CURRENT], [.])
+# AC_DEFINE_UNQUOTED([SP_LIB_VERSION_REVISION], [$SP_LIB_VERSION_REVISION], [.])
+# AC_DEFINE_UNQUOTED([SP_LIB_VERSION_AGE], [$SP_LIB_VERSION_AGE], [.])
+# AC_DEFINE_UNQUOTED([SP_LIB_VERSION_STRING], ["$SP_LIB_VERSION"], [.])
 
 AM_CONDITIONAL([LINUX], [test -z "${host_os##linux*}" || test -z "${host_os##uclinux*}"])
 AM_CONDITIONAL([WIN32], [test -z "${host_os##mingw*}"])
